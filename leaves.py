@@ -20,6 +20,6 @@ if __name__ == "__main__":
     tree2 = Node(
     Node(Node(None,None),Node(None,None)),
     Node(Node(None,None),Node(None,None)))
-    print(count(tree)) # 2
-    print(count(tree2)) # 4
+    print(leaf_count(tree)) # 2
+    print(leaf_count(tree2)) # 4
   

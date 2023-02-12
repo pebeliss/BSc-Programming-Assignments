@@ -19,7 +19,7 @@ class FlipList:
         self.last_rev = None
         self.rev = False
     
-    # Add an item to the end of the list
+    """Add an item to the end of the list"""
     def push_last(self, x):
         if len(self.deque) == 0:
             self.first = x 
@@ -29,7 +29,7 @@ class FlipList:
         self.deque_rev.appendleft(x)
         self.first_rev = x
     
-    # Add an item to the beginning of the list
+    """Add an item to the beginning of the list"""
     def push_first(self, x):
         if len(self.deque) == 0:
             self.last = x
@@ -39,7 +39,7 @@ class FlipList:
         self.deque_rev.append(x)
         self.last_rev = x
 
-    # Remove and return an item from the end of the list
+    """Remove and return an item from the end of the list"""
     def pop_last(self):
         if len(self.deque) > 1:
             self.last = self.deque[-2]
@@ -50,7 +50,7 @@ class FlipList:
         self.deque_rev.popleft()
         return self.deque.pop()
 
-    # Remove and return an item from the beginning of the list
+    """Remove and return an item from the beginning of the list"""
     def pop_first(self):
         if len(self.deque) > 1:
             self.first = self.deque[1]
@@ -61,7 +61,7 @@ class FlipList:
         self.deque_rev.pop()
         return self.deque.popleft()
 
-    # Flip the entire list
+    """Flip the entire list"""
     def flip(self):
         self.deque_rev, self.deque = self.deque, self.deque_rev
 
